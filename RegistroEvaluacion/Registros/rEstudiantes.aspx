@@ -40,7 +40,7 @@
                     <div class="form-group">
                         <label for="PuntosPerdidosTextBox" class="col-md-3 control-label input-sm" style="font-size: small">Promedio</label>
                         <div class="col-md-2">
-                            <asp:TextBox ID="PuntosPeridosTextBox" runat="server" class="form-control input-sm" Style="font-size: small"></asp:TextBox>
+                            <asp:TextBox ID="PuntosPeridosTextBox" ReadOnly ="true" runat="server" class="form-control input-sm" Style="font-size: small"></asp:TextBox>
                         </div>
                     
                     </div>

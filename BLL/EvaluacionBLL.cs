@@ -74,6 +74,8 @@ namespace BLL
             try
             {
                 RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+                RepositorioBase<Categorias> Cate = new RepositorioBase<Categorias>(new DAL.Contexto());
+                RepositorioBase<EvaluacionesDetalle> dCate = new RepositorioBase<EvaluacionesDetalle>(new DAL.Contexto());
 
                 if (db.Evaluaciones.Add(evaluacion) != null)
                 {
@@ -84,6 +86,7 @@ namespace BLL
                     paso = db.SaveChanges() > 0;
                     dbEst.Modificar(estudiante);
                 }
+            
 
             }
             catch (Exception)

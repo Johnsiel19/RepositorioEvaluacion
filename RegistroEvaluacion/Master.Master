@@ -117,6 +117,7 @@
                             <ul class="dropdown-menu" style="font-family:Arial; font-size:16px">
                              <li><a href="/Consultas/cCategorias.aspx">Categorias</a></li>
                                  <li><a href="/Consultas/cEstudiantes.aspx">Estudiantes</a></li>
+                                 <li><a href="/Consultas/cEvaluacion.aspx">Estudiantes</a></li>
                             </ul>
                         </li>
                         <li><a href="#" style="font-family:Arial; font-size:16px">Ayuda</a></li>

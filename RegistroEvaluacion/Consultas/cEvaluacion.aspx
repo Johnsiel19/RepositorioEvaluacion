@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="cEstudiantes.aspx.cs" Inherits="RegistroEvaluacion.Consultas.cEstudiantes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="cEvaluacion.aspx.cs" Inherits="RegistroEvaluacion.Consultas.cEvaluacion" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-     <div class="panel" style="background-color: #ff7101">
-        <div class="panel-heading" style="font-family: Arial Black; font-size: 20px; text-align:center; color: Black">Consulta de Estudiantes</div>
+      <div class="panel" style="background-color: #ff7101">
+        <div class="panel-heading" style="font-family: Arial Black; font-size: 20px; text-align:center; color: Black">Consulta de Evaluacion</div>
     </div>
 
     <div class="panel panel-primary">
@@ -29,7 +29,8 @@
                     <asp:DropDownList ID="FiltroDropDown" runat="server" CssClass="form-control input-sm">
                         <asp:ListItem>Todo</asp:ListItem>
                         <asp:ListItem>ID</asp:ListItem>
-                        <asp:ListItem>Nombre</asp:ListItem>
+                        <asp:ListItem>EstudianteId</asp:ListItem>
+                        <asp:ListItem>TotalPerdidos</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                  
@@ -48,7 +49,7 @@
             </div>
 
         </div>
-        <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="true" ShowHeaderWhenEmpty="True" DataKeyNames="EstudianteId" CellPadding="4" ForeColor="Black" GridLines="None">
+        <asp:GridView ID="Grid" runat="server" class="table table-condensed table-responsive" AutoGenerateColumns="true" ShowHeaderWhenEmpty="True" DataKeyNames="EvaluacionId" CellPadding="4" ForeColor="Black" GridLines="None" >
             <EmptyDataTemplate>
                 <div style="text-align: center">No hay datos.</div>
             </EmptyDataTemplate>
@@ -58,6 +59,4 @@
         </asp:GridView>
 
     </div>
-
-
 </asp:Content>

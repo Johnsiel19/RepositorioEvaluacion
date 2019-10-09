@@ -51,7 +51,7 @@ namespace RegistroEvaluacion.Registros
             Categorias caregoria = new Categorias();
             caregoria.CategoriaId = Convert.ToInt32(CategoriaIdTextBox.Text);
             caregoria.Descripcion = DescripcionTextBox.Text;
-            caregoria.Fecha = Convert.ToDateTime(fechaTextBox.Text);
+            caregoria.Fecha = DateTime.Now;
             caregoria.PromedioPerdido = Convert.ToDecimal( PromedioPeridosTextBox.Text);
 
             return caregoria;

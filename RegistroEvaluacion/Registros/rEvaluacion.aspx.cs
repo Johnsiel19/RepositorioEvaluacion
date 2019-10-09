@@ -91,6 +91,8 @@ namespace RegistroEvaluacion.Registros
             {
                 Grid.DataSource = ((Evaluaciones)ViewState["Evaluacion"]).Detalles;
                 Grid.DataBind();
+
+
             }
         }
 
@@ -128,8 +130,6 @@ namespace RegistroEvaluacion.Registros
             EvaluacionIdTextBox.Text = evaluaciones.EvaluacionId.ToString();
             PuntosPeridosTextBox.Text = evaluaciones.TotalPerdido.ToString();
             fechaTextBox.Text = evaluaciones.Fecha.ToString("yyyy-MM-dd");
-         
-
 
             this.BindGrid();
 
@@ -265,28 +265,33 @@ namespace RegistroEvaluacion.Registros
 
         }
 
-        protected void Grid_RowDeleting(object sender, GridViewDeleteEventArgs e)
+   
+
+
+        protected void Grid_RowDeleting1(object sender, GridViewDeleteEventArgs e)
         {
 
             Evaluaciones evaluaciones = new Evaluaciones();
             evaluaciones = (Evaluaciones)ViewState["Evaluacion"];
-            ViewState["Analisis"] = evaluaciones.Detalles;
+            ViewState["Evaluaciones"] = evaluaciones.Detalles;
 
             int Fila = e.RowIndex;
 
             evaluaciones.Detalles.RemoveAt(Fila);
             this.BindGrid();
-   
 
+
+
+            decimal Calculador = 0;
+
+            foreach (var item in evaluaciones.Detalles)
+            {
+                Calculador = Calculador + item.Perdidos;
+            }
+            PuntosPeridosTextBox.Text = Calculador.ToString();
+
+            ValorTextBox.Text = "0";
+            LogradosTextBox.Text = "0";
         }
-
-      
-
-     
-
-    
-
-   
-        
     }
 }

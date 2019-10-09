@@ -10,7 +10,7 @@
 namespace RegistroEvaluacion.Consultas {
     
     
-    public partial class cCategorias {
+    public partial class cEvaluacion {
         
         /// <summary>
         /// DesdeFecha control.
