@@ -195,7 +195,7 @@ namespace RegistroEvaluacion.Registros
 
             if (EvaluacionIdTextBox.Text == 0.ToString())
             {
-                paso = AnalisisBLL.Guardar(evaluacion);
+                paso = EvaluacionBLL.Guardar(evaluacion);
             }
             else
             {
@@ -204,7 +204,7 @@ namespace RegistroEvaluacion.Registros
                     Utilitarios.Utils.ShowToastr(this.Page, "Se ha podido modificar", "Error", "error");
                     return;
                 }
-                paso = AnalisisBLL.Modificar(evaluacion);
+                paso = EvaluacionBLL.Modificar(evaluacion);
             }
 
             if (paso)
@@ -222,7 +222,7 @@ namespace RegistroEvaluacion.Registros
             {
                 int id = Convert.ToInt32(EvaluacionIdTextBox.Text);
 
-                if (AnalisisBLL.Eliminar(id))
+                if (EvaluacionBLL.Eliminar(id))
                 {
 
                     Utilitarios.Utils.ShowToastr(this.Page, "Eliminado con exito!!", "Eliminado", "info");

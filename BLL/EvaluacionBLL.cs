@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace BLL
 {
-    public  class AnalisisBLL
+    public  class EvaluacionBLL
     {
         public static bool Modificar(Evaluaciones evaluacion)
         {
